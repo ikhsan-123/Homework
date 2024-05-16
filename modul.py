@@ -1,21 +1,23 @@
-stok = []
-def tambah():
-    nama_barang = input("Masukkan nama barang : ")
-    stok_barang = input("Masukkan stok barang : ")
-    barang = {"nama" : nama_barang, "stok" : stok_barang}
-    stok.append(barang)
-    return "--- Data berhasil ditambahkan ---"
+import exercise as mod
 
-def hapus():
-    delete = int(input("Hapus data index ke : "))
-    delete -= 1
-    del stok[delete]
-    return "--- Data berhasil dihapus ---"
+print("Selamat datang di program manajemen stock barang!")
+print("Pilihan :")
+print("1. Tambah data barang")
+print("2. Hapus data barang")
+print("3. Tampilkan data barang")
+print("4. Keluar")
+print('\n')
 
-def tampil():
-    print("--- Data barang ---")
-    number = 1
-    for i in stok:
-        print(f"{number}. {i["nama"]} , Stok : {i["stok"]}")
-        number += 1
-    return ""
+while True:
+    pilihan = int(input("Masukkan pilihan : "))
+    print("=====================================")
+    if pilihan == 1:
+        print(mod.tambah())
+        print("")
+    elif pilihan == 2:
+        print(mod.hapus())
+        print("")
+    elif pilihan == 3:
+        print(mod.tampil())
+    elif pilihan == 4:
+        exit()
