@@ -1,4 +1,4 @@
-import Homework_muhammad_havids_ikhsan as mod
+import exercise as mod
 
 print("Selamat datang di program manajemen stock barang!")
 print("Pilihan :")
